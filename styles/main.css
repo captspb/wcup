@@ -1088,3 +1088,378 @@ html[lang="zh"] .privacy-section li {
         font-size: 13px;
     }
 }
+
+/* ========================================
+   2026世界杯球队分析样式
+   2026 World Cup Team Analysis Styles
+   ======================================== */
+
+/* 分析页面头部 */
+.analysis-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.analysis-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: var(--spacing-sm);
+}
+
+.analysis-host {
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+}
+
+.analysis-intro {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: var(--spacing-lg) auto 0;
+    line-height: 1.8;
+}
+
+/* 筛选器 */
+.analysis-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-lg);
+    background: var(--background-alt);
+    border-radius: var(--radius-md);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.filter-select {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid #ddd;
+    border-radius: var(--radius-sm);
+    background: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filter-select:hover {
+    border-color: var(--accent);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.1);
+}
+
+/* 球队网格 */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+/* 球队卡片 */
+.team-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+/* 球队头部 */
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.team-flag {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.team-info {
+    flex: 1;
+}
+
+.team-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2px;
+}
+
+.team-region {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* 综合评分 */
+.team-overall {
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    min-width: 70px;
+}
+
+.team-overall .overall-score {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.team-overall .overall-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.team-overall.rating-elite {
+    background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+    color: #000;
+}
+
+.team-overall.rating-high {
+    background: linear-gradient(135deg, #e63946 0%, #ff6b6b 100%);
+    color: white;
+}
+
+.team-overall.rating-good {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    color: white;
+}
+
+.team-overall.rating-average {
+    background: linear-gradient(135deg, #a0aec0 0%, #718096 100%);
+    color: white;
+}
+
+/* 预测标签 */
+.team-prediction {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.prediction-champion {
+    background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+    color: #000;
+}
+
+.prediction-darkhorse {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+}
+
+.prediction-upset {
+    background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
+    color: white;
+}
+
+.prediction-groupstage {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+/* 评分条 */
+.team-ratings {
+    margin-bottom: var(--spacing-md);
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.rating-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    min-width: 70px;
+}
+
+.rating-bar {
+    flex: 1;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.rating-fill.rating-elite {
+    background: linear-gradient(90deg, #ffd700, #ff8c00);
+}
+
+.rating-fill.rating-high {
+    background: linear-gradient(90deg, #e63946, #ff6b6b);
+}
+
+.rating-fill.rating-good {
+    background: linear-gradient(90deg, var(--primary-light), var(--primary));
+}
+
+.rating-fill.rating-average {
+    background: linear-gradient(90deg, #a0aec0, #718096);
+}
+
+.rating-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 25px;
+    text-align: right;
+}
+
+/* 分析文字 */
+.team-analysis {
+    margin-bottom: var(--spacing-md);
+}
+
+.team-analysis p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* 关键球员 */
+.team-key-players h4 {
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.players-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.player-tag {
+    background: var(--background-alt);
+    color: var(--text-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* SWOT分析 */
+.team-swot {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid #eee;
+}
+
+.swot-item {
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.swot-item strong {
+    color: var(--primary);
+}
+
+.swot-item.strength {
+    color: #38a169;
+}
+
+.swot-item.weakness {
+    color: #e53e3e;
+}
+
+.swot-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .analysis-filters {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .filter-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .filter-select {
+        flex: 1;
+    }
+    
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-header {
+        flex-wrap: wrap;
+    }
+    
+    .team-overall {
+        order: -1;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-flag {
+        font-size: 2rem;
+    }
+    
+    .team-name {
+        font-size: 1.1rem;
+    }
+    
+    .team-overall .overall-score {
+        font-size: 1.5rem;
+    }
+    
+    .team-prediction {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+    
+    .rating-label {
+        min-width: 60px;
+        font-size: 0.75rem;
+    }
+    
+    .players-list {
+        gap: 4px;
+    }
+    
+    .player-tag {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+}

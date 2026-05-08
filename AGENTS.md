@@ -21,7 +21,8 @@ A static website introducing the FIFA World Cup, built with pure HTML/CSS and fe
 ├── styles/
 │   └── main.css         # Stylesheet with RTL support
 ├── js/
-│   └── i18n.js          # Multi-language system (7 languages)
+│   ├── i18n.js          # Multi-language system (7 languages)
+│   └── teams-analysis.js # 2026 World Cup team analysis
 ├── .coze                # Project configuration
 └── .gitignore
 ```
@@ -54,12 +55,38 @@ Users can switch languages anytime via the globe icon button at the bottom-right
 
 ### Main Page (index.html)
 
+- **2026 World Cup Team Analysis**: Comprehensive analysis of all qualified teams with ratings and predictions
 - **Hero Banner**: World Cup theme and statistics
 - **World Cup History**: Origin & development, global impact
 - **Champions Throughout History**: 1930-2022 championship list
 - **Famous Stadiums**: Lusail, Maracanã, Wembley, etc.
 - **Legendary Records**: Goals, appearances, youngest scorer, etc.
 - **About Us**: Website introduction and contact info
+
+## 2026 World Cup Team Analysis
+
+### Features
+
+- **32 Teams Coverage**: Complete analysis of all qualified teams
+- **Multi-dimensional Ratings**:
+  - Overall (综合评分)
+  - Squad (阵容实力)
+  - Tactics (战术水平)
+  - Experience (大赛经验)
+  - Coaching (教练能力)
+- **Prediction Categories**:
+  - Champion Contender (夺冠热门)
+  - Dark Horse (黑马)
+  - Upset Potential (爆冷潜力)
+  - Group Stage Exit (小组赛出局)
+- **Filtering & Sorting**:
+  - Sort by any rating dimension
+  - Filter by region (Europe, South America, Asia, Africa, North America, Oceania)
+- **Detailed Analysis**:
+  - Key players list
+  - Strengths and weaknesses
+  - Team analysis summary
+- **Multi-language Support**: Available in all 7 languages
 
 ### Privacy Policy Page (privacy.html)
 
@@ -73,7 +100,7 @@ Users can switch languages anytime via the globe icon button at the bottom-right
 
 ## Google AdSense Compliance
 
-1. ✅ **Substantial Content**: 6 content sections, 400+ lines of HTML
+1. ✅ **Substantial Content**: 7 content sections, 400+ lines of HTML
 2. ✅ **Clear Navigation**: Fixed navbar, anchor links, breadcrumbs
 3. ✅ **Privacy Policy Link**: All pages link to `/privacy.html`
 4. ✅ **Cookie Disclosure**: Detailed cookie usage in privacy policy

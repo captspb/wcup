@@ -10,6 +10,8 @@ const translations = {
         // 导航
         nav: {
             home: 'Home',
+            analysis: 'Analysis',
+            analysis: 'Analysis',
             history: 'History',
             champions: 'Champions',
             stadiums: 'Stadiums',
@@ -196,6 +198,7 @@ const translations = {
         // 导航
         nav: {
             home: '首页',
+            analysis: '分析',
             history: '历史',
             champions: '冠军',
             stadiums: '球场',
@@ -367,6 +370,7 @@ const translations = {
     ja: {
         nav: {
             home: 'ホーム',
+            analysis: '分析',
             history: '歴史',
             champions: '優勝国',
             stadiums: '競技場',
@@ -520,6 +524,7 @@ const translations = {
     ko: {
         nav: {
             home: '홈',
+            analysis: '분석',
             history: '역사',
             champions: '챔피언',
             stadiums: '경기장',
@@ -673,6 +678,7 @@ const translations = {
     es: {
         nav: {
             home: 'Inicio',
+            analysis: 'Análisis',
             history: 'Historia',
             champions: 'Campeones',
             stadiums: 'Estadios',
@@ -979,6 +985,7 @@ const translations = {
     ar: {
         nav: {
             home: 'الرئيسية',
+            analysis: 'التحليل',
             history: 'التاريخ',
             champions: 'البطولات',
             stadiums: 'الملاعب',
@@ -1235,11 +1242,12 @@ class LanguageSwitcher {
         // 导航
         const navLinks = document.querySelectorAll('.nav-links a');
         if (navLinks.length >= 6) {
-            navLinks[0].textContent = t.nav.history;
-            navLinks[1].textContent = t.nav.champions;
-            navLinks[2].textContent = t.nav.stadiums;
-            navLinks[3].textContent = t.nav.records;
-            navLinks[4].textContent = t.nav.about;
+            navLinks[0].textContent = t.nav.analysis;
+            navLinks[1].textContent = t.nav.history;
+            navLinks[2].textContent = t.nav.champions;
+            navLinks[3].textContent = t.nav.stadiums;
+            navLinks[4].textContent = t.nav.records;
+            navLinks[5].textContent = t.nav.about;
         }
         
         // 英雄区域
