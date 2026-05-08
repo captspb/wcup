@@ -1,90 +1,121 @@
-# 世界杯百科网站项目
+# World Cup Encyclopedia Website
 
-## 项目概述
+## Project Overview
 
-这是一个使用纯 HTML/CSS 实现的静态网站，用于介绍 FIFA 世界杯。网站符合 Google AdSense 政策要求，包含完整的隐私政策页面。
+A static website introducing the FIFA World Cup, built with pure HTML/CSS and featuring multi-language support. The site complies with Google AdSense policies and includes a complete privacy policy page.
 
-## 技术栈
+## Tech Stack
 
-- **前端框架**：原生 HTML5 + CSS3
-- **无外部依赖**：纯静态页面，CDN-free
-- **字体**：系统字体栈（无需加载外部字体）
-- **图片**：纯 CSS 生成的图标和渐变背景
+- **Frontend**: Pure HTML5 + CSS3
+- **No External Dependencies**: CDN-free static pages
+- **Fonts**: System font stack (no external font loading)
+- **Images**: CSS-generated icons and gradient backgrounds
+- **Multi-language**: JavaScript-based internationalization (i18n)
 
-## 文件结构
+## File Structure
 
 ```
 /workspace/projects/
-├── index.html           # 主页面 - 世界杯百科
-├── privacy.html         # 隐私政策页面
+├── index.html           # Main page - World Cup Encyclopedia
+├── privacy.html         # Privacy Policy page
 ├── styles/
-│   └── main.css         # 样式表
-├── .coze               # 项目配置
+│   └── main.css         # Stylesheet with RTL support
+├── js/
+│   └── i18n.js          # Multi-language system (7 languages)
+├── .coze                # Project configuration
 └── .gitignore
 ```
 
-## 页面内容
+## Multi-Language Support
 
-### 主页面 (index.html)
+### Supported Languages (7 Languages)
 
-- **英雄横幅**：展示世界杯主题和数据统计
-- **世界杯历史**：起源与发展、全球影响力
-- **历届冠军**：1930-2022年世界杯冠军列表
-- **著名球场**：卢塞尔、马拉卡纳、温布利等
-- **传奇纪录**：进球、出场、最年轻进球等纪录
-- **关于我们**：网站介绍和联系信息
+1. **English (en)** - Default language
+2. **中文 (zh)** - Simplified Chinese
+3. **日本語 (ja)** - Japanese
+4. **한국어 (ko)** - Korean
+5. **Español (es)** - Spanish
+6. **Français (fr)** - French
+7. **العربية (ar)** - Arabic (with RTL support)
 
-### 隐私政策页面 (privacy.html)
+### How It Works
 
-- 信息收集与使用
-- Cookies 和追踪技术
-- Google AdSense 与广告
-- 第三方链接
-- 儿童隐私
-- 数据安全
-- 联系我们
+- Language preference is saved to `localStorage`
+- Language switcher button appears in bottom-right corner
+- Click to open dropdown and select language
+- Arabic automatically switches to RTL (right-to-left) layout
+- Font optimization for each language family
 
-## Google AdSense 合规要点
+### Usage
 
-1. ✅ **实质性内容**：页面包含 6 个内容区块，总计超过 300 行 HTML
-2. ✅ **清晰的导航结构**：固定导航栏、锚点链接、面包屑
-3. ✅ **隐私政策链接**：所有页面都包含指向 `/privacy.html` 的链接
-4. ✅ **Cookie 说明**：隐私政策中详细说明了 Cookie 使用
-5. ✅ **Google AdSense 披露**：明确说明使用 Google AdSense
-6. ✅ **退出机制**：提供退出个性化广告的链接
-7. ✅ **联系信息**：提供电子邮件联系方式
-8. ✅ **HTTPS**：部署在 HTTPS 环境中
+Users can switch languages anytime via the globe icon button at the bottom-right of the page. The selection persists across page reloads.
 
-### 广告位设置
+## Page Content
 
-页面中预留了 6 个广告位容器（`<div class="ad-container">`），每个都包含 AdSense 代码注释占位符。
+### Main Page (index.html)
 
-**使用说明**：
-1. 注册 Google AdSense 账号
-2. 获取您的 `publisher ID` (ca-pub-XXXXXXXX)
-3. 创建广告位，获取 `ad slot ID`
-4. 替换 `index.html` 中的注释代码为实际 AdSense 代码
+- **Hero Banner**: World Cup theme and statistics
+- **World Cup History**: Origin & development, global impact
+- **Champions Throughout History**: 1930-2022 championship list
+- **Famous Stadiums**: Lusail, Maracanã, Wembley, etc.
+- **Legendary Records**: Goals, appearances, youngest scorer, etc.
+- **About Us**: Website introduction and contact info
 
-## 性能优化
+### Privacy Policy Page (privacy.html)
 
-- 纯 CSS 动画，无 JavaScript 依赖
-- 系统字体栈，无字体加载延迟
-- CSS 变量实现主题一致性
-- 响应式设计，支持移动端
+- Information collection & use
+- Cookies & tracking technologies
+- Google AdSense & advertising
+- Third-party links
+- Children's privacy
+- Data security
+- Contact us
 
-## 测试命令
+## Google AdSense Compliance
+
+1. ✅ **Substantial Content**: 6 content sections, 400+ lines of HTML
+2. ✅ **Clear Navigation**: Fixed navbar, anchor links, breadcrumbs
+3. ✅ **Privacy Policy Link**: All pages link to `/privacy.html`
+4. ✅ **Cookie Disclosure**: Detailed cookie usage in privacy policy
+5. ✅ **Google AdSense Disclosure**: Clear statement about AdSense usage
+6. ✅ **Opt-out Mechanism**: Link to opt out of personalized ads
+7. ✅ **Contact Information**: Email contact provided
+8. ✅ **HTTPS**: Deployed in HTTPS environment
+
+### Ad Placements
+
+6 ad container placeholders are reserved throughout the page (with comments for easy AdSense code insertion).
+
+**Setup Instructions**:
+1. Register a Google AdSense account
+2. Get your `publisher ID` (ca-pub-XXXXXXXX)
+3. Create ad units and get `ad slot IDs`
+4. Replace placeholder comments with actual AdSense code
+
+## Performance Optimization
+
+- Pure CSS animations, no JavaScript dependencies
+- System font stack, no font loading delays
+- CSS variables for theme consistency
+- Responsive design, mobile-friendly
+- RTL support for Arabic content
+
+## Testing Commands
 
 ```bash
-# 检查服务运行
+# Check server status
 curl -I -s --max-time 3 http://localhost:5000
 
-# 检查页面内容
-curl -s http://localhost:5000 | grep -E 'privacy|Google AdSense'
+# Check page content
+curl -s http://localhost:5000 | grep -E 'Privacy Policy|FIFA World Cup'
 
-# 检查隐私政策页面
-curl -s http://localhost:5000/privacy.html | grep -E 'Cookies|儿童|联系我们'
+# Check privacy policy page
+curl -s http://localhost:5000/privacy.html | grep -E 'Cookies|Children|Contact'
+
+# Check multi-language support
+curl -s http://localhost:5000/js/i18n.js | grep -o "en:" | wc -l
 ```
 
-## 部署
+## Deployment
 
-网站部署在 5000 端口，由静态文件服务器提供访问。
+Website is deployed on port 5000, served by a static file server.

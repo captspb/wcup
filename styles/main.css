@@ -846,3 +846,245 @@ tbody tr:hover {
         font-size: 2rem;
     }
 }
+
+/* ========================================
+   语言切换器样式 / Language Switcher Styles
+   ======================================== */
+
+.lang-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: inherit;
+}
+
+[dir="rtl"] .lang-switcher {
+    right: auto;
+    left: 20px;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.lang-btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.lang-icon {
+    font-size: 18px;
+}
+
+.lang-arrow {
+    font-size: 10px;
+    transition: transform 0.3s;
+}
+
+.lang-dropdown {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    min-width: 160px;
+}
+
+[dir="rtl"] .lang-dropdown {
+    right: auto;
+    left: 0;
+}
+
+.lang-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: background 0.2s;
+}
+
+[dir="rtl"] .lang-option {
+    text-align: right;
+}
+
+.lang-option:hover {
+    background: var(--background-alt);
+}
+
+.lang-option.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* ========================================
+   RTL 支持 / RTL Support
+   ======================================== */
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .nav-links {
+    flex-direction: row-reverse;
+}
+
+body.rtl .hero-stats {
+    flex-direction: row-reverse;
+}
+
+body.rtl .content-grid {
+    direction: rtl;
+}
+
+body.rtl .stadiums-grid {
+    direction: rtl;
+}
+
+body.rtl .records-grid {
+    direction: rtl;
+}
+
+body.rtl .footer-content {
+    direction: rtl;
+}
+
+body.rtl .footer-section ul {
+    padding-right: 0;
+    padding-left: var(--spacing-lg);
+}
+
+body.rtl .champions-list {
+    padding-right: var(--spacing-xl);
+}
+
+body.rtl .champions-list li {
+    flex-direction: row-reverse;
+}
+
+body.rtl .stat-item {
+    text-align: center;
+}
+
+body.rtl .about-links {
+    direction: rtl;
+}
+
+body.rtl .about-link:first-child {
+    margin-left: var(--spacing-md);
+    margin-right: 0;
+}
+
+body.rtl .footer-section a::before {
+    content: '→ ';
+}
+
+body.rtl .footer-section a::before {
+    content: none;
+}
+
+body.rtl .footer-section li {
+    direction: rtl;
+}
+
+/* 阿拉伯语字体优化 */
+html[lang="ar"] body,
+html[lang="ar"] .content-card p,
+html[lang="ar"] .stadium-info p,
+html[lang="ar"] .record-desc,
+html[lang="ar"] .about-content p,
+html[lang="ar"] .privacy-section p,
+html[lang="ar"] .privacy-section li {
+    font-family: 'Segoe UI', 'Arial', 'Tahoma', sans-serif;
+    line-height: 2;
+}
+
+/* 日语字体优化 */
+html[lang="ja"] body,
+html[lang="ja"] .content-card p,
+html[lang="ja"] .stadium-info p,
+html[lang="ja"] .record-desc,
+html[lang="ja"] .about-content p,
+html[lang="ja"] .privacy-section p,
+html[lang="ja"] .privacy-section li {
+    font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+}
+
+/* 韩语字体优化 */
+html[lang="ko"] body,
+html[lang="ko"] .content-card p,
+html[lang="ko"] .stadium-info p,
+html[lang="ko"] .record-desc,
+html[lang="ko"] .about-content p,
+html[lang="ko"] .privacy-section p,
+html[lang="ko"] .privacy-section li {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Nanum Gothic', sans-serif;
+}
+
+/* 中文字体优化 */
+html[lang="zh"] body,
+html[lang="zh"] .content-card p,
+html[lang="zh"] .stadium-info p,
+html[lang="zh"] .record-desc,
+html[lang="zh"] .about-content p,
+html[lang="zh"] .privacy-section p,
+html[lang="zh"] .privacy-section li {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+/* 响应式语言切换器 */
+@media (max-width: 768px) {
+    .lang-switcher {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    [dir="rtl"] .lang-switcher {
+        left: 15px;
+    }
+    
+    .lang-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    .lang-dropdown {
+        min-width: 140px;
+    }
+    
+    .lang-option {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
